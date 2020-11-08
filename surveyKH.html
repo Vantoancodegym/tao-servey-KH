@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>survey</title>
+    <style> p
+    {font-weight: bold}
+    form
+    {
+        background-color: antiquewhite;
+    }
+    </style>
+</head>
+<body>
+<form action="http://demo.codegym.vn/6/registration_form/register.php" method="post">
+    <h1>Marker reseach servey</h1>
+    <p>Please take a few moments to complete this satisfaction survey.
+    </p>
+    <p> What is your age range?</p>
+    <select name="age"style="width: 50%" >
+        <option value="18-24">18-24</option>
+        <option value="25-34">25-34</option>
+        <option value="35-50">35-50</option>
+        <option value="50+">50+</option>
+
+    </select>
+    <p> What is your age range? </p>
+    <select name="income" style="width: 50%">
+        <option value="i1" >$0 - $25,0000</option>
+        <option value="i2" >$25,001 - $50,0000</option>
+        <option value="i3" >$50,001 - 100,0000</option>
+        <option value="i4" >+$100,0000</option>
+    </select>
+    <p>Gender Identify</p>
+    <input type="radio" name="gender"> Male <br>
+    <input type="radio" name="gender"> Female <br>
+    <input type="radio" name="gender" onclick="jumto()"> Other <br>
+    <h6 id="toan">
+    </h6>
+    <p>Which of the following products have your purchased in the last 2 months. Please check all that apply.
+    </p>
+    <input type="checkbox" name="product"> Product 1 <br>
+    <input type="checkbox" name="product"> Product 2 <br>
+    <input type="checkbox" name="product"> Product 3
+    <P>How often would you use our new product?</P>
+    <input type="radio" name="time"> Daily <br>
+    <input type="radio" name="time"> Weekly <br>
+    <input type="radio" name="time"> Monthly
+
+</form>
+
+</body>
+<script>
+    function jumto(){
+        document.getElementById('toan').innerHTML = '<input type="text" name="gender" maxlength="250"> <br>Maximum of 250 characters. &nbsp; &nbsp;  Currently Used: 0 characters.'
+    }
+</script>
+</html>
